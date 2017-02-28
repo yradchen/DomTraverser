@@ -13,11 +13,11 @@ Dom Traverser is a jQuery inspired library that allows for easy manipulation of 
 
   - without arguments
 
-    `Returns the inner html of selected collection`
+    *Returns the inner html of selected collection*
 
   - with arguments
 
-    `Sets the inner html of selected collection`
+    *Sets the inner html of selected collection*
 
 * empty()
 
@@ -82,4 +82,3 @@ Dom Traverser is a jQuery inspired library that allows for easy manipulation of 
 * off(eventHandler)
 
   `Remove an event handler from the selected elements`
-  
