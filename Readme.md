@@ -20,7 +20,7 @@ Dom Traverser is a jQuery inspired library that allows for easy manipulation of 
   - method
 
   `Method to send to the server. Default to 'GET'`
-
+  
   - data
 
   `Data sent up to the server. Defaults to an empty object`
