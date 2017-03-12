@@ -9,8 +9,10 @@
   <body>
     <h1>Dom Traverser Todo List</h1>
     <section id="container">
-      <section>
+      <section id="code-container">
         Code being run
+        <div id="code-box">
+        </div>
       </section>
       <div >
         <ul id="todoList">
@@ -18,9 +20,11 @@
         <label>New Todo:
           <input id="new-todo"type="text" value="" placeholder="Insert Todo Text">
         </label>
+        <div id="buttons">
         <button id="addTodo" class="buttons">Add todo</button>
         <button id="addValue" class="buttons">Insert a default todo value</button>
         <button id="removeLists" class="buttons">Remove all lists!</button>
+      </div>
       </div>
     </section>
   </body>
@@ -45,13 +49,11 @@
     button.html('Completed');
     button.on('click', () => deleteToDo());
     return button;
-};
+  };
 
   const deleteToDo = function(){
     DomTraverser(event.target).parent().remove();
   };
-
-
 
   const setValue = () => {
     DomTraverser("input").value("Value set using Dom Traverser")

@@ -1,8 +1,11 @@
-p, div, button, li, ul, body, input {
+h1, p, div, button, li, ul, body, input, label {
   padding: 0;
   margin: 0;
+  font-family: "Roboto", sans-serif;
+}
 
-
+h1 {
+  color: white;
 }
 
 div {
@@ -13,11 +16,27 @@ div {
 #container {
   display: flex;
   justify-content: center;
+  margin-top: 20px;
+}
+
+#code-container {
+  color: white;
+  /*margin-left: 10%;*/
+  /*margin-right: 20%;*/
+  margin-right: 50px;
+  /*padding-left: 50px;*/
+}
+#code-box {
+  height: 90%;
+  background-color: white;
+  /*width: 200%;*/
+  padding-left: 50px;
+  border-radius: 6px;
 }
 
 body {
   text-align: center;
-  background-color: #467bf7;
+  background-image: url("starry.jpg");
 }
 
 
@@ -25,8 +44,8 @@ body {
   width: 451px;
 }
 label {
+  color: white;
   align-items: baseline;
-  font-family: "Roboto", sans-serif;
   font-size: 18px;
   display: flex;
   flex-direction: column;
@@ -59,8 +78,14 @@ input {
   border-radius: 6px;
   text-align: center;
   padding-bottom: 5px;
-  background-color: #0c39a2;
+  background-color: #258c9e;
+  width: 50%;
   color: white;
+}
+
+#buttons {
+  display: flex;
+  align-items: center;
 }
 
 .single-item {
@@ -68,23 +93,27 @@ input {
   margin-bottom: 10px;
   min-height: 50px;
   text-align: center;
+  background-color: #ffffff;
+  border: 1px solid #0c39a2;
+  border-radius: 5px;
+  display: flex;
+  align-items: center;
 }
 
 p {
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: #ffffff;
-  border: 1px solid #0c39a2;
-  border-radius: 5px;
   width: 90%;
 }
 
 .delete {
   margin-left: 1px;
-  background-color: #0c39a2;
+  background-color: #258c9e;
   border: none;
+  height: 100%;
   padding: 5px;
+  margin-right: 5px;
   border-radius: 6px;
   color: #fff;
 }
