@@ -1,6 +1,7 @@
 # Dom Traverser - JS library for easy DOM traversing and manipulation
 
-Dom Traverser is a jQuery inspired library that allows for easy manipulation of the DOM. This light-weight library allows for making ajax requests, event handling, and manipulating the DOM. Dom Traverser uses native DOM API that is built into every browser, ensuring functionality.
+Dom Traverser is a jQuery inspired library that allows for easy manipulation of the DOM. This light-weight library allows for making ajax requests, event handling, and manipulating the DOM.
+Dom Traverser ensures functionality by using native browser DOM API that is built into every browser.
 
 ### [Live DomTraverser Demo](https://yradchen.github.io/DomTraverser/)
 
