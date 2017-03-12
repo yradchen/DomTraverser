@@ -2,12 +2,14 @@
 
 Dom Traverser is a jQuery inspired library that allows for easy manipulation of the DOM. This light-weight library allows for making ajax requests, event handling, and manipulating the DOM. Dom Traverser uses native DOM API that is built into every browser, ensuring functionality.
 
+### [Live DomTraverser Demo](https://yradchen.github.io/DomTraverser/)
+
 
 ### API
 
-* ###### $l.ajax()
+* #### DomTraverser.ajax()
 
-  `Performs an asynchronous HTTP request. The object accepts the following key, value pair associations;`
+  Performs an asynchronous HTTP request. The object accepts the following key, value pair associations;
 
   - success
 
@@ -20,7 +22,7 @@ Dom Traverser is a jQuery inspired library that allows for easy manipulation of 
   - method
 
   `Method to send to the server. Default to 'GET'`
-  
+
   - data
 
   `Data sent up to the server. Defaults to an empty object`
@@ -33,13 +35,17 @@ Dom Traverser is a jQuery inspired library that allows for easy manipulation of 
 
   `A string containing the page to send the request. Defaults to the current page`
 
-* ###### $l(htmlElement/s)
+* #### DomTraverser(htmlElement/s)
 
   `Used to wrap into a DOM Traverser object. This allows for manipulation using the rest of this readme's API.`
 
+* #### DomTraverser.create(string)
+
+ `Creates an html tag with the passed in string`
+
 ### API - Manipulating DOM Traverser objects
 
-* ###### html()
+* #### html()
 
   - without arguments
 
@@ -49,11 +55,21 @@ Dom Traverser is a jQuery inspired library that allows for easy manipulation of 
 
     `Sets the inner html of every matched element`
 
-* ###### empty()
+* #### value()
+
+  - without arguments
+
+    `Returns the value of the first element of each matched element`
+
+  - with arguments
+
+    `Sets the value of every matched element`
+
+* #### empty()
 
      `Deletes inner html of element from the DOM`
 
-* ###### append(args)
+* #### append(args)
 
   - When arg is an element in the DOM
 
@@ -64,7 +80,7 @@ Dom Traverser is a jQuery inspired library that allows for easy manipulation of 
     `Appends as a child to each element in the collection of matched elements`
 
 
-* ###### attr(name, value)
+* #### attr(name, value)
 
   - With a single argument
 
@@ -79,7 +95,7 @@ Dom Traverser is a jQuery inspired library that allows for easy manipulation of 
     `<h2 id="hidden">My attribute is id with a value of hidden </h2>`
 
 
-* ###### addClass(value)
+* #### addClass(value)
 
   - without arguments
 
@@ -89,40 +105,37 @@ Dom Traverser is a jQuery inspired library that allows for easy manipulation of 
 
     `Sets the class(es) of each matched element in the collection of elements`
 
-* ###### removeClass()
+* #### removeClass()
 
   `Removes the class(es) from every matched element in the collection of elements`
 
-* ###### children()
+* #### children()
 
   `Returns the children in the collection of matched elements`
 
-* ###### parent()
+* #### parent()
 
   `Returns the parent in the collection of matched elements`
 
-* ###### find(selector)
+* #### find(selector)
 
   `Returns descendants, filtered by the selector, of each element in the currently matched collection`
 
-* ###### remove()
+* #### remove()
 
   `Removes all the matched elements from the DOM`
 
-* ###### on(eventHandler, callback)
+* #### on(eventHandler, callback)
 
   `Attaches an event handler function to the selected elements`
 
-* ###### off(eventHandler)
+* #### off(eventHandler)
 
   `Remove an event handler from the selected elements`
-
 
 
 ### Future Features
 
 While this library can go many directions, I believe the most important following will allow the library to remain lightweight while offering the most flexibility in use;
 
-* Allowing the Ajax request to return a promise
-
-* Add prevent default to event handlers.
+* add the ability to remove all event handlers for easy cleanup.
