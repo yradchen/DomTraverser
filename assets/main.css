@@ -1,0 +1,90 @@
+p, div, button, li, ul, body, input {
+  padding: 0;
+  margin: 0;
+
+
+}
+
+div {
+  display: flex;
+  flex-direction: column;
+}
+
+#container {
+  display: flex;
+  justify-content: center;
+}
+
+body {
+  text-align: center;
+  background-color: #467bf7;
+}
+
+
+#todoList {
+  width: 451px;
+}
+label {
+  align-items: baseline;
+  font-family: "Roboto", sans-serif;
+  font-size: 18px;
+  display: flex;
+  flex-direction: column;
+}
+
+#new-todo {
+  margin-top: 5px;
+  width: 100%;
+}
+
+input {
+  border: 1px solid #d0d3d6;
+  border-radius: 3px;
+  height: 30px;
+  outline: none;
+}
+
+li {
+  display: flex;
+}
+
+input {
+  text-align: center
+}
+
+.buttons {
+  margin-top: 10px;
+  padding-top: 5px;
+  border: none;
+  border-radius: 6px;
+  text-align: center;
+  padding-bottom: 5px;
+  background-color: #0c39a2;
+  color: white;
+}
+
+.single-item {
+  margin-top: 10px;
+  margin-bottom: 10px;
+  min-height: 50px;
+  text-align: center;
+}
+
+p {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #ffffff;
+  border: 1px solid #0c39a2;
+  border-radius: 5px;
+  width: 90%;
+}
+
+.delete {
+  margin-left: 1px;
+  background-color: #0c39a2;
+  border: none;
+  padding: 5px;
+  border-radius: 6px;
+  color: #fff;
+}

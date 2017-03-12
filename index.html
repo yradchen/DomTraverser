@@ -2,21 +2,67 @@
 <html>
   <head>
     <meta charset="utf-8">
-    <!-- Source jQuery library to test against implementation of methods created -->
-    <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script> -->
+  <link rel="stylesheet" href="./assets/main.css" type="text/css"/>
     <script src="./lib/DomTraverser.js" charset="utf-8"></script>
-    <title></title>
+    <title>DomTraverser</title>
   </head>
   <body>
-    <div>
-      <ul>
-        <li class="list-one"><a href="https://www.google.com">Ask Google</a></li>
-        <li><a href="https://www.yahoo.com">Ask Yahoo</a> </li>
-        <li><a href="https://www.ask.com">Ask Jeeves</a></li>
-      </ul>
-
-      <h1>large text</h1>
-      <h2>smaller text</h2>
-        </div>
+    <h1>Dom Traverser Todo List</h1>
+    <section id="container">
+      <section>
+        Code being run
+      </section>
+      <div >
+        <ul id="todoList">
+        </ul>
+        <label>New Todo:
+          <input id="new-todo"type="text" value="" placeholder="Insert Todo Text">
+        </label>
+        <button id="addTodo" class="buttons">Add todo</button>
+        <button id="addValue" class="buttons">Insert a default todo value</button>
+        <button id="removeLists" class="buttons">Remove all lists!</button>
+      </div>
+    </section>
   </body>
 </html>
+
+<script>
+  const addTodo = () => {
+    const li = DomTraverser.create("li");
+    const p = DomTraverser.create("p")
+    const input = DomTraverser("input").value();
+    p.append(input);
+    li.append(p);
+    DomTraverser("input").value("");
+    li.append(addDeleteButton());
+    li.addClass("single-item")
+    DomTraverser("ul").append(li);
+  }
+
+  const addDeleteButton = function(){
+    const button = DomTraverser.create('button');
+    button.addClass('delete');
+    button.html('Completed');
+    button.on('click', () => deleteToDo());
+    return button;
+};
+
+  const deleteToDo = function(){
+    DomTraverser(event.target).parent().remove();
+  };
+
+
+
+  const setValue = () => {
+    DomTraverser("input").value("Value set using Dom Traverser")
+  }
+
+  const removeLists = () => {
+    DomTraverser("ul").empty();
+  }
+
+
+  DomTraverser('#addTodo').on("click", addTodo);
+  DomTraverser('#addValue').on("click", setValue);
+  DomTraverser('#removeLists').on('click', removeLists)
+</script>
