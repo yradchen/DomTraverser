@@ -7,12 +7,12 @@
     <title>DomTraverser</title>
   </head>
   <body>
-    <h1>Dom Traverser Todo List</h1>
+    <h1>Dom Traverser Todo List Demo</h1>
     <section id="container">
       <section id="code-container">
         Code being run
-        <div id="code-box">
-        </div>
+        <pre id="code-box">
+        </pre>
       </section>
       <div >
         <ul id="todoList">
@@ -33,11 +33,11 @@
 <script>
   const addTodo = () => {
     const li = DomTraverser.create("li");
-    const p = DomTraverser.create("p")
-    const input = DomTraverser("input").value();
-    p.append(input);
+    const p = DomTraverser.create("p");
+    const input = DomTraverser("input");
+    p.html(input.value());
     li.append(p);
-    DomTraverser("input").value("");
+    input.value("");
     li.append(addDeleteButton());
     li.addClass("single-item")
     DomTraverser("ul").append(li);
@@ -48,6 +48,9 @@
     button.addClass('delete');
     button.html('Completed');
     button.on('click', () => deleteToDo());
+    button.on("click", () => {
+      setCodeDemoText(deleteToDo)
+    })
     return button;
   };
 
@@ -56,15 +59,29 @@
   };
 
   const setValue = () => {
-    DomTraverser("input").value("Value set using Dom Traverser")
+    DomTraverser("input")
+    .value("Value set using Dom Traverser")
   }
 
   const removeLists = () => {
     DomTraverser("ul").empty();
   }
 
+  const setCodeDemoText = (functionRun) => {
+    DomTraverser('#code-box').html(`${functionRun.toString()}`)
+  }
+
 
   DomTraverser('#addTodo').on("click", addTodo);
+  DomTraverser('#addTodo').on("click", () => {
+    setCodeDemoText(addTodo)
+  });
   DomTraverser('#addValue').on("click", setValue);
+  DomTraverser('#addValue').on("click", () => {
+    setCodeDemoText(setValue)
+  });
   DomTraverser('#removeLists').on('click', removeLists)
+  DomTraverser('#removeLists').on("click", () => {
+    setCodeDemoText(removeLists)
+  });
 </script>
