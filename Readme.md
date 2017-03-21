@@ -7,7 +7,7 @@ Dom Traverser ensures functionality by using native browser DOM API that is buil
 
 ### Installation
 
-Get started with POM by downloading this repo and adding ./lib/DomTraverser.js as a script in your program.
+Get started with Dom Traverser by downloading this repo and adding ./lib/DomTraverser.js as a script in your program.
 
 `<script type="text/javascript" src=".lib/DomTraverser.js" charset="utf-8"></script>`
 
