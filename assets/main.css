@@ -1,4 +1,4 @@
-h1, p, div, button, li, ul, body, input, label {
+h1, p, div, button, li, ul, body, input, label, a {
   padding: 0;
   margin: 0;
   font-family: "Roboto", sans-serif;
@@ -139,6 +139,7 @@ footer a {
   text-align: center;
   background-color: #258c9e;
   color: #fff;
+  font-size: 14px;
 }
 footer a:hover {
   transition: 0.4s;
