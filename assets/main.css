@@ -74,6 +74,7 @@ input {
 }
 
 .buttons {
+  cursor: pointer;
   margin-top: 10px;
   padding-top: 5px;
   border: none;
@@ -83,6 +84,11 @@ input {
   background-color: #258c9e;
   width: 50%;
   color: #fff;
+}
+
+.buttons:hover {
+  transition: 0.4s;
+  background-color: #1a6673;
 }
 
 #buttons {
@@ -119,4 +125,22 @@ p {
   margin-right: 5px;
   border-radius: 6px;
   color: #fff;
+}
+footer {
+  margin-top: 15%;
+}
+footer a {
+  transition: 0.4s;
+  text-decoration: none;
+  padding: 8px;
+  margin: 0px 5px;
+  border: none;
+  border-radius: 6px;
+  text-align: center;
+  background-color: #258c9e;
+  color: #fff;
+}
+footer a:hover {
+  transition: 0.4s;
+  background-color: #1a6673;
 }
